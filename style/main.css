@@ -34,7 +34,7 @@ main{
 /* ****************** */
 
 
-.una-columna, .dos-columnas, .tres-columnas, .desktop-cuatro-columnas, .dos-columnas-inline{
+.desktop-una-columna, .desktop-dos-columnas, .desktop-tres-columnas, .desktop-cuatro-columnas, .dos-columnas-inline{
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
@@ -44,11 +44,11 @@ main{
     display: flex;
 }
 
-.dos-columnas .columna{
+.desktop-dos-columnas .columna{
     width: 48%;
 }
 
-.tres-columnas .columna{
+.desktop-tres-columnas .columna{
     width: 30%;
 }
 
@@ -221,7 +221,7 @@ img{
 
 }
 
-.una-columna{
+.desktop-una-columna{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -270,69 +270,282 @@ img{
 
 
 
+
+
+
 /* ******************** */
 /* ****DISPOSITIVOS*** */
 /* ****************** */
 
 
+
 @media (max-width:479px) {
 
-    header{
-        width: 100%;
-        padding: 0;
-    }
 
-    body{
-        font-size: 1em;
-    }
 
-    h1 {
-        font-size: 2em;
-    }
+
+    /*======Structure======*/
+
+
     
-    h2 {
-        font-size: 1.5em;
-    }
-
-    img{
-        width: 100%;
-    }
-
-
-    .barra-superior .noticias-hoy{
-        display: none;
-    }
-
-
-    .logo svg{
-        width: 10em;
-        margin: auto 0;
-    }
-
-
-    .login{
-        background-color: transparent;
-        fill:rgb(253, 253, 253);
-    }
-
-    .login span{
-        display: none;
+    main{
+        margin: 0 auto;
+        position: relative;
+        top: 15vh;
+        width: 95%;
     }
 
 
 
+
+    /*========Columns=======*/
 
 
 
     .mobile-una-columna{
         width: 100%;
-        display: inherit;
     }
 
-   
+    .mobile-una-columna .columna{
+        width: 100%;
+    }
+
+    .dos-columnas-inline{
+        display: inherit;
+        width: 100%;
+    }
+    
+    .mobile-una-columna-inline .columna{
+        border-bottom: 1px solid hsl(0, 0%, 87%);
+        display: flex;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    
+    .mobile-una-columna-inline .columna div{
+        display: inherit;
+        margin-right: 1em;
+        width: 100%;
+    }
+
+    .mobile-dos-columnas{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-dos-columnas .columna{
+        width: 48%;
+    }
+
+    .desktop-dos-columnas-aside .columna-aside{
+        display: none;
+    }
+
+    .mobile-dos-columnas-aside .columna-main{
+        width: 100%;
+    }
+
+    .mobile-tres-columnas{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-tres-columnas .columna{
+        width: 30%;
+    }
+
+    .mobile-tres-columnas-start{
+        display: flex;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .mobile-tres-columnas-start .columna{
+        width: inherit;
+    }
+
+    .mobile-cuatro-columnas{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-cuatro-columnas .columna{
+        width: 22%;
+    }
 
 
+
+
+    /*=======Top_Menu=======*/
+    
+
+
+
+    .barra-superior{
+        padding: 1% 5%;
+    }
+
+    .islas ul{
+        float: none;
+    }
+
+    .islas ul li{
+        font-size: 0.7rem;
+    }
+
+    .noticias-hoy{
+        display: none;
+    }
+
+
+
+
+    /*======Header_Menu=====*/
+
+
+
+
+
+    .barra-principal{
+        padding: 3% 5%;
+        width: 90%;
+    }
+
+    .hamburguer #collapse-button {
+        width: 100%;
+    }
+
+    .hamburguer #collapse-button span {
+        height: 5px;
+        margin: 0.4rem auto;
+    }
+
+    .hamburguer #collapse-button span:first-child {
+        margin: 0;
+    }
+
+    .logo svg{
+        height: 1.7rem;
+        margin: 0 1em;
+    }
+
+    .login button{
+        background-color: transparent;
+        border: none;
+        border-radius: 0.1rem;
+        cursor: pointer;
+        margin-right: 0.5rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .hamburguer .hamburguer #collapse-button span {
+        opacity: 1;
+        margin: 0.5em auto;
+        transform: none;
+    }
+    
+    .login button span {
+        display: none;
+    }
+    
+    .login button svg {
+        height: 1.5rem;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .login button svg path {
+        fill:hsl(0, 0%, 100%)
+    }
+    
+    .register button{
+        background-color: hsl(47, 100%, 50%);
+        border: none;
+        border-radius: 0.1rem;
+        cursor: pointer;
+        padding: 0.4rem 0.5rem;
+    }
+    
+    .register button span{
+        font-style: italic;
+        font-weight: 600;
+    }
+
+
+
+    /*=====Main Menu========*/
+
+
+
+    .barra-menu{
+        padding: 1% 5%;
+        width: 200%;
+    }
+
+
+
+    /*=========Newss=========*/
+
+
+
+    .noticia{
+        margin-bottom: 1em;
+    }
+    
+    .h1{
+        font-size: 2rem;
+    }
+
+    .h2{
+        font-size: 2.05rem;
+        font-weight: 900;
+        line-height: 1.07em;
+    }
+
+    .h3{
+        font-size: 1.1rem;
+        line-height: 1.25em;
+    }
+
+    .h4{
+        font-size: 1.1rem;
+        line-height: 1.25em;
+    }
+
+    .noticia p{
+        margin: .5em 0
+    }
+
+    .noticia{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .noticia-autor{
+        margin: .5em 0;
+    }
+
+    .noticia-autor span{
+        color: hsl(0, 0%, 33%);
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .noticia-subtitulo{
+        margin: .5em 0;
+    }
+
+    .noticia-subtitulo span{
+        color: hsl(0, 0%, 33%);
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .noticia-subtitulo.highlight span{
+        color:hsl(0, 100%, 40%);
+    }
 
 }
-
-
